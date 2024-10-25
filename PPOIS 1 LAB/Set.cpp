@@ -1,12 +1,5 @@
 #include "Set.h"
 
-std::map<char, int> Set::getElements() {
-    return setElement;
-}
-std::map<Set*, int> Set::getSubsets() {
-    return setSubset;
-}
-
 Set::Set() {}
 Set::~Set() {}
 Set::Set(const std::string& input) {
@@ -88,10 +81,10 @@ void Set::clear() {
     if (!setElement.empty() || !setSubset.empty()) {
         setElement.clear();
         setSubset.clear();
-        std::cout << "Ìíîæåñòâî î÷èùåíî." << std::endl;
+        std::cout << "ÃŒÃ­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã® Ã®Ã·Ã¨Ã¹Ã¥Ã­Ã®." << std::endl;
     }
     else {
-        std::cout << "Ìíîæåñòâî óæå î÷èùåíî." << std::endl;
+        std::cout << "ÃŒÃ­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã® Ã³Ã¦Ã¥ Ã®Ã·Ã¨Ã¹Ã¥Ã­Ã®." << std::endl;
     }
 }
 bool isBracket(const std::string& str) {
@@ -102,18 +95,18 @@ bool isBracket(const std::string& str) {
         }
         else if (ch == '}') {
             if (stack.empty()) {
-                std::cout << "Îøèáêà" << std::endl;
+                std::cout << "ÃŽÃ¸Ã¨Ã¡ÃªÃ " << std::endl;
                 return false;
             }
             stack.pop();
         }
         else if (ch == '[' || ch == ']') {
-            std::cout << "Íå ïðàâèëüíûé ñèìâîë: " << ch << std::endl;
+            std::cout << "ÃÃ¥ Ã¯Ã°Ã Ã¢Ã¨Ã«Ã¼Ã­Ã»Ã© Ã±Ã¨Ã¬Ã¢Ã®Ã«: " << ch << std::endl;
             return false;
         }
     }
     if (!stack.empty()) {
-        std::cout << "Îñòàëîñü " << stack.size() << " íåçàêðûòûõ '{'" << std::endl;
+        std::cout << "ÃŽÃ±Ã²Ã Ã«Ã®Ã±Ã¼ " << stack.size() << " Ã­Ã¥Ã§Ã ÃªÃ°Ã»Ã²Ã»Ãµ '{'" << std::endl;
         return false;
     }
     return true;
@@ -125,14 +118,14 @@ void Set::deleteElement(char element, int count) {
         it->second -= count;
         if (it->second <= 0) {
             setElement.erase(it);
-            std::cout << "Ýëåìåíò '" << element << "' óñïåøíî óäàë¸í." << std::endl;
+            std::cout << "ÃÃ«Ã¥Ã¬Ã¥Ã­Ã² '" << element << "' Ã³Ã±Ã¯Ã¥Ã¸Ã­Ã® Ã³Ã¤Ã Ã«Â¸Ã­." << std::endl;
         }
         else {
-            std::cout << "Ýëåìåíò '" << element << "' óìåíüøåí íà " << count << ". Òåêóùåå êîëè÷åñòâî: " << it->second << std::endl;
+            std::cout << "ÃÃ«Ã¥Ã¬Ã¥Ã­Ã² '" << element << "' Ã³Ã¬Ã¥Ã­Ã¼Ã¸Ã¥Ã­ Ã­Ã  " << count << ". Ã’Ã¥ÃªÃ³Ã¹Ã¥Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã®: " << it->second << std::endl;
         }
     }
     else {
-        std::cout << "Îøèáêà: ýëåìåíò '" << element << "' íå íàéäåí â ìíîæåñòâå." << std::endl;
+        std::cout << "ÃŽÃ¸Ã¨Ã¡ÃªÃ : Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã² '" << element << "' Ã­Ã¥ Ã­Ã Ã©Ã¤Ã¥Ã­ Ã¢ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã¥." << std::endl;
     }
 }
 void Set::show(int a) const {
@@ -149,7 +142,7 @@ void Set::show(int a) const {
     if (!setSubset.empty()) {
         std::cout << std::setw(a) << std::endl;
         for (const auto& subset : setSubset) {
-            std::cout << std::setw(a) << "Ïîäìíîæåñòâî :" << std::endl;
+            std::cout << std::setw(a) << "ÃÃ®Ã¤Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã® :" << std::endl;
             subset.first->show(a);
         }
     }
@@ -170,30 +163,30 @@ bool Set::operator==(const Set& other) const {
         }
 
         if (!found) {
-            std::cout << "Ïîäìíîæåñòâî: " << subset << " (êîëè÷åñòâî: " << count << ") íå íàéäåíî â äðóãîì ìíîæåñòâå." << std::endl;
+            std::cout << "ÃÃ®Ã¤Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã®: " << subset << " (ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã®: " << count << ") Ã­Ã¥ Ã­Ã Ã©Ã¤Ã¥Ã­Ã® Ã¢ Ã¤Ã°Ã³Ã£Ã®Ã¬ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã¥." << std::endl;
             return false; 
         }
     }
-    std::cout << "Ìíîæåñòâà ðàâíû." << std::endl;
+    std::cout << "ÃŒÃ­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã  Ã°Ã Ã¢Ã­Ã»." << std::endl;
     return true;
 }
 int Set::power() const {
     int count = 0;
-    std::cout << "Ýëåìåíòû ìíîæåñòâà:"<< std::endl;
+    std::cout << "ÃÃ«Ã¥Ã¬Ã¥Ã­Ã²Ã» Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã :"<< std::endl;
     for (const auto& element : setElement) {
         count += element.second;
-        std::cout << "Ýëåìåíò: " << element.first << ", Êîëè÷åñòâî: " << element.second << std::endl;
+        std::cout << "ÃÃ«Ã¥Ã¬Ã¥Ã­Ã²: " << element.first << ", ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã®: " << element.second << std::endl;
     }
     if (setSubset.empty()) {
-        std::cout << "Íåò ïîäìíîæåñòâ."<< std::endl;
+        std::cout << "ÃÃ¥Ã² Ã¯Ã®Ã¤Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢."<< std::endl;
     }
     else {
         for (const auto& element : setSubset) {
             count ++;
-            std::cout << "Ïîäìíîæåñòâî: " << element.second << std::endl;
+            std::cout << "ÃÃ®Ã¤Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã®: " << element.second << std::endl;
         }
     }
-    std::cout << "Ìîùíîñòü äàííîãî ìóëüòèìíîæåñòâà: " << count << std::endl;
+    std::cout << "ÃŒÃ®Ã¹Ã­Ã®Ã±Ã²Ã¼ Ã¤Ã Ã­Ã­Ã®Ã£Ã® Ã¬Ã³Ã«Ã¼Ã²Ã¨Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã : " << count << std::endl;
     return count;
 }
 Set Set::unionElements(const Set& other) const {
@@ -343,7 +336,7 @@ int  numberOfSubsets(std::string string) {
     size_t i;
     for (i = 0; braceCount > 0; i++) {
         if (i >= string.size()) {
-            std::cout << "Îøèáêà: Íåäîñòàòî÷íî çàêðûâàþùèõ ñêîáîê â ñòðîêå." << std::endl;
+            std::cout << "ÃŽÃ¸Ã¨Ã¡ÃªÃ : ÃÃ¥Ã¤Ã®Ã±Ã²Ã Ã²Ã®Ã·Ã­Ã® Ã§Ã ÃªÃ°Ã»Ã¢Ã Ã¾Ã¹Ã¨Ãµ Ã±ÃªÃ®Ã¡Ã®Ãª Ã¢ Ã±Ã²Ã°Ã®ÃªÃ¥." << std::endl;
             return -1;
         }
         if (string[i] == '{') {
@@ -358,11 +351,11 @@ int  numberOfSubsets(std::string string) {
 
 void Set::add(Set* element, int count) {
     if (element == nullptr) {
-        std::cout << "Îøèáêà: ïåðåäàííûé óêàçàòåëü íà ïîäìíîæåñòâî ÿâëÿåòñÿ null!" << std::endl;
+        std::cout << "ÃŽÃ¸Ã¨Ã¡ÃªÃ : Ã¯Ã¥Ã°Ã¥Ã¤Ã Ã­Ã­Ã»Ã© Ã³ÃªÃ Ã§Ã Ã²Ã¥Ã«Ã¼ Ã­Ã  Ã¯Ã®Ã¤Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã® Ã¿Ã¢Ã«Ã¿Ã¥Ã²Ã±Ã¿ null!" << std::endl;
         return;
     }
     if (count <= 0) {
-        std::cout << "Îøèáêà: êîëè÷åñòâî äîëæíî áûòü áîëüøå íóëÿ!" << std::endl;
+        std::cout << "ÃŽÃ¸Ã¨Ã¡ÃªÃ : ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã¤Ã®Ã«Ã¦Ã­Ã® Ã¡Ã»Ã²Ã¼ Ã¡Ã®Ã«Ã¼Ã¸Ã¥ Ã­Ã³Ã«Ã¿!" << std::endl;
     }
     auto it = setSubset.find(element);
     if (it != setSubset.end()) {
@@ -375,13 +368,13 @@ void Set::add(Set* element, int count) {
 }
 void Set::add(char element, int count) {
     if (count <= 0) {
-        std::cout << "Îøèáêà: êîëè÷åñòâî äîëæíî áûòü áîëüøå íóëÿ!" << std::endl;
+        std::cout << "ÃŽÃ¸Ã¨Ã¡ÃªÃ : ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã¤Ã®Ã«Ã¦Ã­Ã® Ã¡Ã»Ã²Ã¼ Ã¡Ã®Ã«Ã¼Ã¸Ã¥ Ã­Ã³Ã«Ã¿!" << std::endl;
         return;
     }
     auto it = setElement.find(element);
     if (it != setElement.end()) {
         it->second += count;
-        std::cout << "Óñïåøíî îáíîâëåíî: ýëåìåíò '" << element << "' óæå ñóùåñòâóåò, íîâîå êîëè÷åñòâî: " << it->second << std::endl;
+        std::cout << "Ã“Ã±Ã¯Ã¥Ã¸Ã­Ã® Ã®Ã¡Ã­Ã®Ã¢Ã«Ã¥Ã­Ã®: Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã² '" << element << "' Ã³Ã¦Ã¥ Ã±Ã³Ã¹Ã¥Ã±Ã²Ã¢Ã³Ã¥Ã², Ã­Ã®Ã¢Ã®Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã®: " << it->second << std::endl;
     }
     else {
         setElement[element] = count;
@@ -390,7 +383,7 @@ void Set::add(char element, int count) {
 void showBoolean(const std::vector<Set> boolean) {
 
     if (boolean.empty()) {
-        std::cout << "Íåò ïîäìíîæåñòâ äëÿ îòîáðàæåíèÿ." << std::endl;
+        std::cout << "ÃÃ¥Ã² Ã¯Ã®Ã¤Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢ Ã¤Ã«Ã¿ Ã®Ã²Ã®Ã¡Ã°Ã Ã¦Ã¥Ã­Ã¨Ã¿." << std::endl;
         return;
     }
     for (auto it = boolean.begin(); it != boolean.end(); ++it) {
