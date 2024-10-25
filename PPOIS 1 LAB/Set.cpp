@@ -1,12 +1,5 @@
 #include "Set.h"
 
-std::map<char, int> Set::getElements() {
-    return setElement;
-}
-std::map<Set*, int> Set::getSubsets() {
-    return setSubset;
-}
-
 Set::Set() {}
 Set::Set(const std::string& input) {
     size_t index = 1;
@@ -139,19 +132,22 @@ void Set::show(int a) const {
         std::cout << "{   }" << std::endl;
         return;
     }
+
     std::cout << std::setw(a) << " " << "{ ";
+
     if (!setElement.empty()) {
-        for (const auto& element :setElement) {
-            std::cout << std::setw(a) << "(" << element.first << " : " << element.second << ") ";
+        for (std::map<std::string, int>::iterator it = setElement.begin(); it != setElement.end(); ++it) {
+            std::cout << std::setw(a) << "(" << it->first << " : " << it->second << ") ";
         }
     }
     if (!setSubset.empty()) {
         std::cout << std::setw(a) << std::endl;
-        for (const auto& subset : setSubset) {
-            std::cout << std::setw(a) << "Ïîäìíîæåñòâî :" << std::endl;
-            subset.first->show(a);
+        for (size_t i = 0; i < setSubset.size(); ++i) {
+            std::cout << std::setw(a) << "Подмножество :" << std::endl;
+            setSubset[i]->show(a);
         }
     }
+
     std::cout << " }" << std::endl;
 }
 bool Set::operator==(const Set& other) const {
