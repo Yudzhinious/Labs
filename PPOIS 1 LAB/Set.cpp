@@ -1,7 +1,7 @@
 #include "Set.h"
 
+
 Set::Set() {}
-Set::~Set() {}
 Set::Set(const std::string& input) {
     size_t index = 1;
     while (index < input.size()) {
