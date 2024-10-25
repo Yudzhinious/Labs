@@ -1,5 +1,11 @@
 #include "Set.h"
 
+std::map<char, int> Set::getElements() {
+    return setElement;
+}
+std::map<Set*, int> Set::getSubsets() {
+    return setSubset;
+}
 
 Set::Set() {}
 Set::Set(const std::string& input) {
