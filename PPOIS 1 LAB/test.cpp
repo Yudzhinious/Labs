@@ -40,7 +40,7 @@ TEST(MultisetTest, RemoveElements) {
     std::map<char, int> expected = { {'a', 2} };
 
     EXPECT_EQ(multiset.getElements(), expected);
-    ASSERT_EQ(output.str(), "Элемент 'a' уменьшен на 1. Текущее количество: 2\n");
+    ASSERT_EQ(output.str(), "ГќГ«ГҐГ¬ГҐГ­ГІ 'a' ГіГ¬ГҐГ­ГјГёГҐГ­ Г­Г  1. Г’ГҐГЄГіГ№ГҐГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ®: 2\n");
 
     output.str("");
     oldCout = std::cout.rdbuf(output.rdbuf());
@@ -48,14 +48,14 @@ TEST(MultisetTest, RemoveElements) {
     std::cout.rdbuf(oldCout);
 
     EXPECT_TRUE(multiset.getElements().empty());
-    ASSERT_EQ(output.str(), "Элемент 'a' успешно удалён.\n");
+    ASSERT_EQ(output.str(), "ГќГ«ГҐГ¬ГҐГ­ГІ 'a' ГіГ±ГЇГҐГёГ­Г® ГіГ¤Г Г«ВёГ­.\n");
 
     output.str("");
     oldCout = std::cout.rdbuf(output.rdbuf());
     multiset.deleteElement('a', 1);
     std::cout.rdbuf(oldCout);
 
-    ASSERT_EQ(output.str(), "Ошибка: элемент 'a' не найден в множестве.\n");
+    ASSERT_EQ(output.str(), "ГЋГёГЁГЎГЄГ : ГЅГ«ГҐГ¬ГҐГ­ГІ 'a' Г­ГҐ Г­Г Г©Г¤ГҐГ­ Гў Г¬Г­Г®Г¦ГҐГ±ГІГўГҐ.\n");
 }
 TEST(SubsetTest, ValidSimpleSubset) {
     std::string input = "{a,b,c}";
@@ -159,15 +159,15 @@ TEST(MultisetTest, IsBracketInvalidCases) {
     std::streambuf* oldCout = std::cout.rdbuf(output.rdbuf());
 
     ASSERT_FALSE(isBracket(invalidSet1));
-    ASSERT_STREQ(output.str().c_str(), "Осталось 1 незакрытых '{'\n");
+    ASSERT_STREQ(output.str().c_str(), "ГЋГ±ГІГ Г«Г®Г±Гј 1 Г­ГҐГ§Г ГЄГ°Г»ГІГ»Гµ '{'\n");
     output.str("");
 
     ASSERT_FALSE(isBracket(invalidSet2));
-    ASSERT_STREQ(output.str().c_str(), "Ошибка\n");
+    ASSERT_STREQ(output.str().c_str(), "ГЋГёГЁГЎГЄГ \n");
     output.str("");
 
     ASSERT_FALSE(isBracket(invalidSet3));
-    ASSERT_STREQ(output.str().c_str(), "Не правильный символ: [\n");
+    ASSERT_STREQ(output.str().c_str(), "ГЌГҐ ГЇГ°Г ГўГЁГ«ГјГ­Г»Г© Г±ГЁГ¬ГўГ®Г«: [\n");
 
     std::cout.rdbuf(oldCout);
 }
@@ -184,7 +184,7 @@ TEST(MultisetTest, ClearFunction) {
 
     EXPECT_TRUE(multiset.getElements().empty());
     EXPECT_TRUE(multiset.getSubsets().empty());
-    ASSERT_EQ(output.str(), "Множество очищено.\n");
+    ASSERT_EQ(output.str(), "ГЊГ­Г®Г¦ГҐГ±ГІГўГ® Г®Г·ГЁГ№ГҐГ­Г®.\n");
 }
 TEST(MultisetTest, Power) {
     std::string input = "{a, b, b, n, {c, d}}";
@@ -300,44 +300,6 @@ TEST(MultisetTest, ShowEmptySet) {
     std::cout.rdbuf(old);
     ASSERT_EQ(buffer.str(), "{   }\n");
 }
-//TEST(MultisetTest, GetTwoDifferentSetsCorrectInput) {
-//    Set set1, set2;
-//    std::vector<Set*> vect = { &set1, &set2 };
-//
-//    std::stringstream input("1 2\n");
-//    std::streambuf* oldCin = std::cin.rdbuf(input.rdbuf());
-//    int s1, s2;
-//
-//    int result = get(vect, s1, s2);
-//
-//    std::cin.rdbuf(oldCin);
-//    ASSERT_EQ(result, 1);
-//    ASSERT_EQ(s1, 1);
-//    ASSERT_EQ(s2, 2);
-//}
-//TEST(MultisetTest, GetSingleSetCorrectInput) {
-//    Set set1;
-//    std::vector<Set*> mas = { &set1 };
-//    std::stringstream input("1\n");
-//    std::streambuf* oldCin = std::cin.rdbuf(input.rdbuf());
-//    int set = 0;
-//    int result = get(mas, set);
-//
-//    std::cin.rdbuf(oldCin);
-//    ASSERT_EQ(result, 1);
-//}
-//TEST(MultisetTest, GetSingleSetIncorrectInput) {
-//    Set set1;
-//    std::vector<Set*> mas = { &set1 };
-//    std::stringstream input("2\n1\n");
-//    std::streambuf* oldCin = std::cin.rdbuf(input.rdbuf());
-//    int set = 0;
-//
-//    int result = get(mas, set);
-//
-//    std::cin.rdbuf(oldCin);
-//    ASSERT_EQ(result, -1);
-//}
 TEST(MultisetTest, BooleanFunction) {
     Set multiset;
 
@@ -362,7 +324,7 @@ TEST(MultisetTest, ShowBooleanFunction) {
     std::streambuf* oldCout = std::cout.rdbuf(output.rdbuf());
     std::vector<Set> emptyVector;
     showBoolean(emptyVector);
-    EXPECT_EQ(output.str(), "Нет подмножеств для отображения.\n");
+    EXPECT_EQ(output.str(), "ГЌГҐГІ ГЇГ®Г¤Г¬Г­Г®Г¦ГҐГ±ГІГў Г¤Г«Гї Г®ГІГ®ГЎГ°Г Г¦ГҐГ­ГЁГї.\n");
 
     std::cout.rdbuf(oldCout);
     Set nonEmptySubset;
@@ -370,7 +332,7 @@ TEST(MultisetTest, ShowBooleanFunction) {
     output.str("");
     std::vector<Set> nonEmptyVector = { nonEmptySubset };
     showBoolean(nonEmptyVector);
-    EXPECT_FALSE(output.str().find("Элементы: d: 1") != std::string::npos);
+    EXPECT_FALSE(output.str().find("ГќГ«ГҐГ¬ГҐГ­ГІГ»: d: 1") != std::string::npos);
 }
 TEST(MultisetTest, OperatorMultiplyAssign) {
     Set multiset1;
