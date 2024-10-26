@@ -20,20 +20,20 @@ int main() {
 	while (1)
 	{
 		int choice = 0;
-		std::cout << "  1 - ñîçäàíèå/äîáàâëåíèå íîâîãî ìíîæåñòâà " << std::endl;
-		std::cout << "  2 - âûâîä âñåõ ìíîæåñòâ íà ýêðàí  " << std::endl;
-		std::cout << "  3 - äîáàâëåíèå íîâîãî ýëåìåíòà " << std::endl;
-		std::cout << "  4 - ïðîâåðêà ìíîæåñòâà íà íàëè÷èå ýëåìåíòà " << std::endl;
-		std::cout << "  5 - íàõîæäåíèå áóëåàíà ìíîæåñòâà " << std::endl;
-		std::cout << "  6 - íàõîæäåíèå îáúåäèíåíèÿ ìíîæåñòâ " << std::endl;
-		std::cout << "  7 - íàõîæäåíèå ïåðåñå÷åíèÿ ìíîæåñòâ " << std::endl;
-		std::cout << "  8 - íàõîæäåíèå ðàçíîñòè ìíîæåñòâ " << std::endl;
-		std::cout << "  9 - íàõîæäåíèå ìîùíîñòè ìíîæåñòâà " << std::endl;
-		std::cout << " 10 - óäàëåíèå ýëåìåíòà ìíîæåñòâà " << std::endl;
-		std::cout << " 11 - î÷èñòêà ìíîæåñòâà " << std::endl;
-		std::cout << "  0 - âûõîä èç ïðîãðàììû " << std::endl;
+		std::cout << "  1 - Ã±Ã®Ã§Ã¤Ã Ã­Ã¨Ã¥/Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¥ Ã­Ã®Ã¢Ã®Ã£Ã® Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã  " << std::endl;
+		std::cout << "  2 - Ã¢Ã»Ã¢Ã®Ã¤ Ã¢Ã±Ã¥Ãµ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢ Ã­Ã  Ã½ÃªÃ°Ã Ã­  " << std::endl;
+		std::cout << "  3 - Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¥ Ã­Ã®Ã¢Ã®Ã£Ã® Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  " << std::endl;
+		std::cout << "  4 - Ã¯Ã°Ã®Ã¢Ã¥Ã°ÃªÃ  Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã  Ã­Ã  Ã­Ã Ã«Ã¨Ã·Ã¨Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  " << std::endl;
+		std::cout << "  5 - Ã­Ã ÃµÃ®Ã¦Ã¤Ã¥Ã­Ã¨Ã¥ Ã¡Ã³Ã«Ã¥Ã Ã­Ã  Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã  " << std::endl;
+		std::cout << "  6 - Ã­Ã ÃµÃ®Ã¦Ã¤Ã¥Ã­Ã¨Ã¥ Ã®Ã¡ÃºÃ¥Ã¤Ã¨Ã­Ã¥Ã­Ã¨Ã¿ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢ " << std::endl;
+		std::cout << "  7 - Ã­Ã ÃµÃ®Ã¦Ã¤Ã¥Ã­Ã¨Ã¥ Ã¯Ã¥Ã°Ã¥Ã±Ã¥Ã·Ã¥Ã­Ã¨Ã¿ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢ " << std::endl;
+		std::cout << "  8 - Ã­Ã ÃµÃ®Ã¦Ã¤Ã¥Ã­Ã¨Ã¥ Ã°Ã Ã§Ã­Ã®Ã±Ã²Ã¨ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢ " << std::endl;
+		std::cout << "  9 - Ã­Ã ÃµÃ®Ã¦Ã¤Ã¥Ã­Ã¨Ã¥ Ã¬Ã®Ã¹Ã­Ã®Ã±Ã²Ã¨ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã  " << std::endl;
+		std::cout << " 10 - Ã³Ã¤Ã Ã«Ã¥Ã­Ã¨Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã  " << std::endl;
+		std::cout << " 11 - Ã®Ã·Ã¨Ã±Ã²ÃªÃ  Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã  " << std::endl;
+		std::cout << "  0 - Ã¢Ã»ÃµÃ®Ã¤ Ã¨Ã§ Ã¯Ã°Ã®Ã£Ã°Ã Ã¬Ã¬Ã» " << std::endl;
 
-		std::cout << "Âûáåðèòå íîìåð íåîáõîäèìîé êîìàíäû: ";
+		std::cout << "Ã‚Ã»Ã¡Ã¥Ã°Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã­Ã¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã®Ã© ÃªÃ®Ã¬Ã Ã­Ã¤Ã»: ";
 		std::cin >> choice;
 
 		switch (choice) {
@@ -107,7 +107,7 @@ int main() {
 			return 0;
 		}
 		default:
-			std::cout << "Íåêîððåêòíûé ââîä. Ïîæàëóéñòà, âûáåðèòå ñóùåñòâóþùóþ êîìàíäó." << std::endl;
+			std::cout << "ÃÃ¥ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã»Ã© Ã¢Ã¢Ã®Ã¤. ÃÃ®Ã¦Ã Ã«Ã³Ã©Ã±Ã²Ã , Ã¢Ã»Ã¡Ã¥Ã°Ã¨Ã²Ã¥ Ã±Ã³Ã¹Ã¥Ã±Ã²Ã¢Ã³Ã¾Ã¹Ã³Ã¾ ÃªÃ®Ã¬Ã Ã­Ã¤Ã³." << std::endl;
 			break;
 
 		}
@@ -118,34 +118,34 @@ int main() {
 
 int get(const std::vector<Set*>& vect, int& set1, int& set2) {
 	if (vect.size() < 2) {
-		std::cout << "Çàäàíî ìåíåå äâóõ ìíîæåñòâ" << std::endl;
+		std::cout << "Ã‡Ã Ã¤Ã Ã­Ã® Ã¬Ã¥Ã­Ã¥Ã¥ Ã¤Ã¢Ã³Ãµ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢" << std::endl;
 		return -1;
 	}
 
 	while (true) {
-		std::cout << "Ââåäèòå íîìåðà äâóõ ðàçëè÷íûõ ìíîæåñòâ (îò 1 äî " << vect.size() << "): ";
+		std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã°Ã  Ã¤Ã¢Ã³Ãµ Ã°Ã Ã§Ã«Ã¨Ã·Ã­Ã»Ãµ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢ (Ã®Ã² 1 Ã¤Ã® " << vect.size() << "): ";
 		std::cin >> set1 >> set2;
 		if (set1 > 0 && set2 > 0 && set1 != set2 && set1 <= vect.size() && set2 <= vect.size()) {
 			return set1;
 		}
 		else {
-			std::cout << "Íåêîððåêòíûå çíà÷åíèÿ. Óáåäèòåñü, ÷òî íîìåðà íàõîäÿòñÿ â äèàïàçîíå è ðàçëè÷àþòñÿ." << std::endl;
+			std::cout << "ÃÃ¥ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã»Ã¥ Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¿. Ã“Ã¡Ã¥Ã¤Ã¨Ã²Ã¥Ã±Ã¼, Ã·Ã²Ã® Ã­Ã®Ã¬Ã¥Ã°Ã  Ã­Ã ÃµÃ®Ã¤Ã¿Ã²Ã±Ã¿ Ã¢ Ã¤Ã¨Ã Ã¯Ã Ã§Ã®Ã­Ã¥ Ã¨ Ã°Ã Ã§Ã«Ã¨Ã·Ã Ã¾Ã²Ã±Ã¿." << std::endl;
 		}
 	}
 }
 int get(const std::vector<Set*>& mas, int set) {
 	if (!mas.empty()) {
-		std::cout << "Ââåäèòå íîìåð ìíîæåñòâà: ";
+		std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã : ";
 		std::cin >> set;
 		if (set > 0 && set <= mas.size()) {
 			return set;
 		}
 		else {
-			std::cout << "Íåêîððåêòíîå çíà÷åíèå" << std::endl;
+			std::cout << "ÃÃ¥ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã®Ã¥ Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¥" << std::endl;
 		}
 	}
 	else {
-		std::cout << "Íè îäíîãî ìíîæåñòâà íå çàäàíî" << std::endl;
+		std::cout << "ÃÃ¨ Ã®Ã¤Ã­Ã®Ã£Ã® Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã  Ã­Ã¥ Ã§Ã Ã¤Ã Ã­Ã®" << std::endl;
 	}
 	return -1;
 }
@@ -161,24 +161,24 @@ void CreateSet(std::vector<Set*>& vect) {
 		vect.push_back(newSet1);
 	}
 	else {
-		std::cout << "Ïðîâåðüòå ïðàâèëüíîñòü ââîäà '}'" << std::endl;
+		std::cout << "ÃÃ°Ã®Ã¢Ã¥Ã°Ã¼Ã²Ã¥ Ã¯Ã°Ã Ã¢Ã¨Ã«Ã¼Ã­Ã®Ã±Ã²Ã¼ Ã¢Ã¢Ã®Ã¤Ã  '}'" << std::endl;
 	}
 }
 
 void SetShow(const std::vector<Set*>& vect) {
 	int choice = 0;
-	std::cout << "Ââåäèòå íîìåð âûâîäèìîãî ìíîæåñòâà :" << std::endl;
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã¢Ã»Ã¢Ã®Ã¤Ã¨Ã¬Ã®Ã£Ã® Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã  :" << std::endl;
 	std::cin >> choice;
 	if (!vect.empty()) {
 		for (int i = 0; i < vect.size(); i++) {
 			if (i + 1 == choice) {
-				std::cout << "Ìíîæåñòâî " << i + 1 << ": ";
+				std::cout << "ÃŒÃ­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã® " << i + 1 << ": ";
 				vect[i]->show();
 			}
 		}
 	}
 	else {
-		std::cout << "Ìíîæåñòâà íå áûëè çàäàíû." << std::endl;
+		std::cout << "ÃŒÃ­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã  Ã­Ã¥ Ã¡Ã»Ã«Ã¨ Ã§Ã Ã¤Ã Ã­Ã»." << std::endl;
 	}
 }
 
@@ -186,7 +186,7 @@ void AddElement(const std::vector<Set*>& vect) {
 	int choice = get(vect, 0);
 	if (choice > 0 && choice <= vect.size()) {
 		std::string inputElement;
-		std::cout << "Ââåäèòå ýëåìåíò äëÿ äîáàâëåíèÿ â ìíîæåñòâî " << choice << ": ";
+		std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã² Ã¤Ã«Ã¿ Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¿ Ã¢ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã® " << choice << ": ";
 
 		while (true) {
 			std::getline(std::cin, inputElement);
@@ -198,7 +198,7 @@ void AddElement(const std::vector<Set*>& vect) {
 			vect[choice - 1]->add(inputElement[0]);
 		}
 		else {
-			std::cout << "Ââåäèòå òîëüêî îäèí ñèìâîë." << std::endl;
+			std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã²Ã®Ã«Ã¼ÃªÃ® Ã®Ã¤Ã¨Ã­ Ã±Ã¨Ã¬Ã¢Ã®Ã«." << std::endl;
 		}
 	}
 }
@@ -208,7 +208,7 @@ void SetCheck(const std::vector<Set*>& vect) {
 
 	if (first > 0) {
 		std::string str;
-		std::cout << "Íàëè÷èå êàêîãî ýëåìåíòà âû õîòèòå ïðîâåðèòü?" << std::endl;
+		std::cout << "ÃÃ Ã«Ã¨Ã·Ã¨Ã¥ ÃªÃ ÃªÃ®Ã£Ã® Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  Ã¢Ã» ÃµÃ®Ã²Ã¨Ã²Ã¥ Ã¯Ã°Ã®Ã¢Ã¥Ã°Ã¨Ã²Ã¼?" << std::endl;
 		do {
 			std::getline(std::cin, str);
 			if (str != " ") {
@@ -217,13 +217,13 @@ void SetCheck(const std::vector<Set*>& vect) {
 		} while (str.empty());
 	}
 	if (count != 0) {
-		std::cout << "Ýëåìåíò ñóùåñòâóåò âî ìíîæåñòâå" << std::endl;
+		std::cout << "ÃÃ«Ã¥Ã¬Ã¥Ã­Ã² Ã±Ã³Ã¹Ã¥Ã±Ã²Ã¢Ã³Ã¥Ã² Ã¢Ã® Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã¥" << std::endl;
 	}
 }
 void ShowBoolean(std::vector<Set*>& vect) {
 	int choice = 0, count = 0;
 	choice = get(vect, choice);
-	std::cout << "Ââåäèòå íåîáõîäèìîå êîëè÷åñòâî ðàç äëÿ ïðîâåðêè áóëåàíà :" << std::endl;
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã®Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã°Ã Ã§ Ã¤Ã«Ã¿ Ã¯Ã°Ã®Ã¢Ã¥Ã°ÃªÃ¨ Ã¡Ã³Ã«Ã¥Ã Ã­Ã  :" << std::endl;
 	std::cin >> count;
 	for (int i = 0; i < count; i++) {
 		if (choice != 0) {
@@ -231,7 +231,7 @@ void ShowBoolean(std::vector<Set*>& vect) {
 			showBoolean(boolean);
 		}
 		else {
-			std::cout << "Íåêîððåêòíûé âûáîð ìíîæåñòâà" << std::endl;
+			std::cout << "ÃÃ¥ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã»Ã© Ã¢Ã»Ã¡Ã®Ã° Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã " << std::endl;
 		}
 	}
 }
@@ -245,7 +245,7 @@ void SetUnion(std::vector<Set*>& vect) {
 		vect.back()->show();
 	}
 	else {
-		std::cout << " Îøèáêà ââîäà äâóõ ìíîæåñòâ" << std::endl;
+		std::cout << " ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¢Ã¢Ã®Ã¤Ã  Ã¤Ã¢Ã³Ãµ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢" << std::endl;
 	}
 }
 
@@ -258,7 +258,7 @@ void SetIntersection(std::vector<Set*>& vect) {
 		vect.back()->show();
 	}
 	else {
-		std::cout << " Îøèáêà ââîäà äâóõ ìíîæåñòâ" << std::endl;
+		std::cout << " ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¢Ã¢Ã®Ã¤Ã  Ã¤Ã¢Ã³Ãµ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢" << std::endl;
 	}
 }
 
@@ -271,7 +271,7 @@ void SetDifference(std::vector<Set*>& vect) {
 		vect.back()->show();
 	}
 	else {
-		std::cout << " Îøèáêà ââîäà äâóõ ìíîæåñòâ" << std::endl;
+		std::cout << " ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã¢Ã¢Ã®Ã¤Ã  Ã¤Ã¢Ã³Ãµ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢" << std::endl;
 	}
 }
 void SetPower(const std::vector<Set*>& vect) {
@@ -279,20 +279,20 @@ void SetPower(const std::vector<Set*>& vect) {
 	choice = get(vect, choice);
 
 	if (choice > 0) {
-		std::cout << "Âû âûáðàëè ìíîæåñòâî: " << std::endl;
+		std::cout << "Ã‚Ã» Ã¢Ã»Ã¡Ã°Ã Ã«Ã¨ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã®: " << std::endl;
 		vect[choice - 1]->show(2);
 		char confirm;
-		std::cout << "Ïîäñ÷èòàòü ìîùíîñòü äëÿ " << choice << " ìíîæåñòâà ?" << std::endl;
+		std::cout << "ÃÃ®Ã¤Ã±Ã·Ã¨Ã²Ã Ã²Ã¼ Ã¬Ã®Ã¹Ã­Ã®Ã±Ã²Ã¼ Ã¤Ã«Ã¿ " << choice << " Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã  ?" << std::endl;
 		std::cin >> confirm;
 		if (confirm == 'y'  || confirm == 'Y') {
 			vect[choice - 1]->power();
 		}
 		else {
-			std::cout << "Ìîùíîñòü ìíîæåñòâà íå âû÷èñëåíà." << std::endl;
+			std::cout << "ÃŒÃ®Ã¹Ã­Ã®Ã±Ã²Ã¼ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã  Ã­Ã¥ Ã¢Ã»Ã·Ã¨Ã±Ã«Ã¥Ã­Ã ." << std::endl;
 		}
 	}
 	else {
-		std::cout << "Íåêîððåêòíûé âûáîð ìíîæåñòâà. Âûáåðèòå ïðàâèëüíûé íîìåð." << std::endl;
+		std::cout << "ÃÃ¥ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã»Ã© Ã¢Ã»Ã¡Ã®Ã° Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã . Ã‚Ã»Ã¡Ã¥Ã°Ã¨Ã²Ã¥ Ã¯Ã°Ã Ã¢Ã¨Ã«Ã¼Ã­Ã»Ã© Ã­Ã®Ã¬Ã¥Ã°." << std::endl;
 	}
 }
 void DeleteElement(const std::vector<Set*>& vect) {
@@ -302,12 +302,12 @@ void DeleteElement(const std::vector<Set*>& vect) {
 	if (choice > 0) {
 		std::string str;
 		int count = 1;
-		std::cout << "Âûáåðèòå ýëåìåíò äëÿ óäàëåíèÿ èç ìíîæåñòâà: ";
+		std::cout << "Ã‚Ã»Ã¡Ã¥Ã°Ã¨Ã²Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã² Ã¤Ã«Ã¿ Ã³Ã¤Ã Ã«Ã¥Ã­Ã¨Ã¿ Ã¨Ã§ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã : ";
 		do {
 			std::getline(std::cin, str);
 		} while (str.empty() || str.size() > 1);
 
-		std::cout << "Ââåäèòå êîëè÷åñòâî äëÿ óäàëåíèÿ: ";
+		std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã¤Ã«Ã¿ Ã³Ã¤Ã Ã«Ã¥Ã­Ã¨Ã¿: ";
 		std::string countI;
 		std::getline(std::cin, countI);
 		if (!countI.empty()) {
@@ -323,7 +323,7 @@ void DeleteSet(const std::vector<Set*>& vect) {
 	if (first > 0 && first <= vect.size()) {
 		vect[first - 1]->clear();
 
-		std::cout << "Îñòàâøèåñÿ ìíîæåñòâà:" << std::endl;
+		std::cout << "ÃŽÃ±Ã²Ã Ã¢Ã¸Ã¨Ã¥Ã±Ã¿ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã :" << std::endl;
 		for (const auto& set : vect) {
 			if (set) {
 				set->show();
@@ -331,6 +331,6 @@ void DeleteSet(const std::vector<Set*>& vect) {
 		}
 	}
 	else {
-		std::cout << "Îøèáêà: íåâåðíûé èíäåêñ." << std::endl;
+		std::cout << "ÃŽÃ¸Ã¨Ã¡ÃªÃ : Ã­Ã¥Ã¢Ã¥Ã°Ã­Ã»Ã© Ã¨Ã­Ã¤Ã¥ÃªÃ±." << std::endl;
 	}
 }
